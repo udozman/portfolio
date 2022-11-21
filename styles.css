@@ -1,0 +1,253 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%; } }
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%; } }
+@media(max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+  .bio{
+    flex-direction: column;
+  }
+  .socials{
+    padding-left: 7rem;
+  }
+  .projects{
+    grid-template-columns: 25rem;
+  }
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #777;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+.home_body{
+  background-image: linear-gradient(to right, #d6d6d6, #dbcb91);
+}
+.about_body{
+  background-image:linear-gradient(to right, rgba(240, 224, 175, .7), rgba(143, 120, 50, .7)),url("coding.jpg");
+  background-size: cover;
+}
+.project_body{
+  background-color: rgba(240, 224, 175, .3);
+}
+.bio{
+  padding: 10rem 0;
+  display: flex;
+  column-gap: 6rem;
+  margin-left: 10rem;
+}
+.bio_heading{
+  letter-spacing: .5rem;
+  font-style: italic;
+}
+.bio_subheading{
+  font-style: italic;
+  letter-spacing: .5rem;
+  animation-name: myAnimation;
+  animation-duration: 3s;
+}
+.bio-picture{
+  border-radius: 50%;
+  width: 30rem;
+  outline: .3rem solid #ab8b16;
+}
+.first_letter{
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #ab8b16;
+}
+.short_bio{
+  text-align: left;
+}
+hr{
+  margin: 0 5rem;
+  color: #ab8b16;
+  border-style: dotted;
+}
+.navigation{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  /* padding-left: 22rem; */
+  text-align: center;
+}
+.nav_list{
+  display: inline-block;
+  margin: 3rem;
+}
+.nav_link{
+  text-decoration: none;
+  color: #777;
+  transition: .1s ease-in;
+}
+.nav_link:hover{
+  border-bottom: 5px solid #ab8b16;
+}
+.socials_icon{
+  color: #ab8b16;
+  font-size: 2.6rem;
+  margin-top: 3rem;
+  margin-right: 2rem;
+  transition: .2s ease-in;
+}
+.socials_icon:hover{
+  transform: translateY(-.3rem);
+}
+.socials_heading{
+  font-style: italic;
+  font-size: 3rem;
+}
+.about_bio{
+  color: #38352b;
+  text-align: left;
+  margin-left: 8rem;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  font-style: italic;
+}
+.about_me{
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.quotation{
+  color: #a85322;
+  font-size: 7rem;
+}
+.quotation_bottom{
+  position: relative;
+  left: 70rem;
+}
+.copyright{
+  text-align: center;
+  padding: 3rem 0;
+}
+@keyframes myAnimation {
+  0%{
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.skills{
+  margin-top: 20rem;
+  margin-left: 4rem;
+  color: #240406;
+  margin-bottom: 10rem;
+}
+.skills-heading{
+  font-weight: 600;
+  color: #240406;
+  letter-spacing: 2rem;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+}
+.skills-box{
+  display: grid;
+  grid-template-columns: repeat(3, 20rem);
+  grid-column-gap: 1rem;
+  grid-row-gap: 3rem;
+  padding-top: 4rem;
+  margin-left: .6rem;
+  padding-bottom: 4rem;
+}
+.skill{
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 3px;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skill:hover{
+  outline-style: solid;
+  outline-color: #a85322;
+}
+.skill-icon{
+  font-size: 3rem;
+}
+.my-work{
+  padding-bottom: 4rem;
+  margin-left: 5rem;
+  text-align: center;
+}
+.my-work_heading{
+  letter-spacing: .5rem;
+  color: #ab8b16;
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-left: 13rem;
+}
+.project-box{
+  border-radius: 5px;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+.project-box:hover{
+  outline-style: solid;
+  outline-color: #ab8b16;
+}
+.image-box{
+  height: 20rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.image-box1{
+  background-image: url('images/contact-manager.png');
+}
+.image-box2{
+  background-image: url('images/natours.png');
+}
+.image-box3{
+  background-image: url('images/guess.png');
+}
+.image-box4{
+  background-image: url('images/expense.png');
+}
+.image-box5{
+  background-image: url('images/to-do.png');
+}
+.projects{
+  display: grid;
+  grid-template-columns: repeat(2, 25rem);
+  grid-row-gap: 6rem;
+  grid-column-gap: 4rem;
+  padding: 6rem 0 6rem 0;
+  margin-left: 5rem;
+}
+.project-link{
+  background-color: #a85322;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 5px;
+}
+.project-link:hover{
+  background-color: #ab8b16;
+}
+.project-title{
+  color: #593604;
+  transform: translateY(14rem);
+}
